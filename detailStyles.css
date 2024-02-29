@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: #1db954;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  margin-top: 30px;
+}
+
+.search-bar {
+  text-align: center;
+  margin-top: 30px;
+  align-items: center;
+  /* margin-right: 120px; */
+}
+
+.search-bar input[type="text"],
+.search-bar button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar input[type="text"] {
+  width: 500px;
+  margin: auto;
+}
+
+.cart-icon {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(110%) contrast(100%);
+}
+
+.cart-logo {
+  margin-top: 35px;
+  margin-left: 700px;
+}
+
+.cart-logo img {
+  width: 35px;
+  height: auto;
+}
+
+.left-section {
+  position: absolute;
+  top: 20px;
+  font-size: smaller;
+}
+
+.top-links a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.top-links a::after,
+.authentication-links a::after {
+  content: "|";
+  margin-left: 10px;
+}
+
+.top-links a:last-child::after,
+.authentication-links a:last-child::after {
+  content: none; /* Menghilangkan tanda "|" setelah elemen terakhir */
+}
+
+main {
+  padding: 20px;
+}
+
+.product-details {
+  padding: 20px;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.product-details img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-details h2 {
+  margin-top: 10px;
+}
+
+.product-details p {
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn,
+.cart-btn {
+  flex: 1;
+  height: 40px; /* Tinggi tombol */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px; /* Jarak antara tombol */
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cart-btn .cart-icons {
+  width: 25px;
+  height: auto;
+  margin-right: 5px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(110%) contrast(100%);
+}
+
+footer {
+  background-color: #1db954;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

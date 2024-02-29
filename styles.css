@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: #1db954;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  margin-top: 30px;
+}
+
+.search-bar {
+  text-align: center;
+  margin-top: 30px;
+  align-items: center;
+  /* margin-right: 120px; */
+}
+
+.search-bar input[type="text"],
+.search-bar button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar input[type="text"] {
+  width: 500px;
+  margin: auto;
+}
+
+.cart-icon {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(110%) contrast(100%);
+}
+
+.cart-logo {
+  margin-top: 35px;
+  margin-left: 700px;
+}
+
+.cart-logo img {
+  width: 35px;
+  height: auto;
+}
+
+.left-section {
+  position: absolute;
+  top: 20px;
+  font-size: smaller;
+}
+
+.top-links a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.top-links a::after,
+.authentication-links a::after {
+  content: "|";
+  margin-left: 10px;
+}
+
+.top-links a:last-child::after,
+.authentication-links a:last-child::after {
+  content: none; /* Menghilangkan tanda "|" setelah elemen terakhir */
+}
+
+main {
+  padding: 20px;
+}
+
+.products-container {
+  padding: 20px;
+  border: 1px solid #ccc; /* Menambah border pada container produk */
+  border-radius: 6px; /* Menambah sudut border */
+  margin-bottom: 20px; /* Menambah jarak antara container produk dan footer */
+  background-color: #fff;
+}
+
+.products-container h2 {
+  margin-left: 55px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1db954;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+footer {
+  background-color: #1db954;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

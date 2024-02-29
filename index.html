@@ -1,30 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- coding by helpme_coder -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buat ayangku</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-</head>
-
-<body>
-    <div class="container">
-        <div class="valentines">
-            <div class="envelope"></div>
-            <div class="front"></div>
-            <div class="card">
-                <div class="text">I Love u</br> Anysa</br> Sayangku</div>
-                <div class="heart"></div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TokoSaya - Belanja Online</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Shoptify</h1>
+        <div class="cart-logo">
+          <img src="img/shopping-cart.svg" alt="Keranjang Belanja" class="cart-icon" />
         </div>
-    </div>
-    <div class="shadow"></div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <div class="search-bar">
+          <input type="text" placeholder="Cari produk..." />
+          <button type="submit">Cari</button>
+        </div>
+        <div class="left-section">
+          <div class="top-links">
+            <a href="#">Notifikasi</a>
+            <a href="#">Bantuan</a>
+            <a href="#">Bahasa</a>
+            <a href="#">Daftar</a>
+            <a href="#">Login</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="products-container">
+        <h2>Produk Terpopuler</h2>
+        <div class="products">
+          <div class="product">
+            <img src="img/sepatu.jpeg" alt="Produk 1" />
+            <h3>Nike Air Jordan</h3>
+            <p>Rp 499.000</p>
+            <a href="detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+          <div class="product">
+            <img src="img/jaket.jpeg" alt="Produk 2" />
+            <h3>Jaket Sport</h3>
+            <p>Rp 300.000</p>
+            <a href="detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+          <div class="product">
+            <img src="img/sweater.jpeg" alt="Produk 2" />
+            <h3>Sweater Swag</h3>
+            <p>Rp 280.000</p>
+            <a href="detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+          <div class="product">
+            <img src="img/laptop.jpeg" alt="Produk 2" />
+            <h3>Laptop MSI</h3>
+            <p>Rp 9.700.000</p>
+            <a href="detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+          <div class="product">
+            <img src="img/helm.jpeg" alt="Produk 2" />
+            <h3>Helm SHOEI Monster</h3>
+            <p>Rp 15.900.000</p>
+            <a href="detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+        </div>
+      </section>
+      <section class="products-container">
+        <h2 id="countdown"></h2>
+        <!-- <p id="countdown"></p> -->
+        <div class="products">
+          <div class="product">
+            <img src="img/Tws.jpeg" alt="Produk 1" />
+            <h3>Tws I13 Pro</h3>
+            <p class="strikethrough">Rp 499.000</p>
+            <p>Rp 36.500</p>
+            <a href="img/detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+          <div class="product">
+            <img src="img/Topi.jpeg" alt="Produk 2" />
+            <h3>Hat Ozyc Bone</h3>
+            <p class="strikethrough">Rp 35.000</p>
+            <p>Rp 16.000</p>
+            <a href="detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+          <div class="product">
+            <img src="img/sarung tangan.jpeg" alt="Produk 2" />
+            <h3>Gloves Motorcycle</h3>
+            <p class="strikethrough">Rp 50.000</p>
+            <p>Rp 21.300</p>
+            <a href="detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+          <div class="product">
+            <img src="img/parfum.jpeg" alt="Produk 2" />
+            <h3>Parfum Prada Black</h3>
+            <p class="strikethrough">Rp 150.000</p>
+            <p>Rp 60.000</p>
+            <a href="detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+          <div class="product">
+            <img src="img/headphone.jpeg" alt="Produk 2" />
+            <h3>Headphone Logitech G733</h3>
+            <p class="strikethrough">Rp 1.669.000</p>
+            <p>Rp 1.399.000</p>
+            <a href="detailProduk.html" class="btn">Beli Sekarang</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 TokoSaya. All rights reserved.</p>
+    </footer>
+    <script>
+      // Tanggal dan waktu akhir flash sale (dalam milidetik)
+      var endTime = new Date("February 28, 2024 23:59:59").getTime();
 
+      // Memperbarui hitungan mundur setiap 1 detik
+      var countdownInterval = setInterval(function () {
+        // Waktu sekarang (dalam milidetik)
+        var now = new Date().getTime();
+
+        // Selisih waktu antara sekarang dan akhir flash sale
+        var timeRemaining = endTime - now;
+
+        // Hitung waktu dalam hari, jam, menit, dan detik
+        var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Tampilkan sisa waktu dalam elemen dengan id "countdown"
+        document.getElementById("countdown").innerHTML = "Flash Sale " + days + " hari " + hours + " jam " + minutes + " menit " + seconds + " detik ";
+
+        // Hentikan hitungan mundur jika waktu sudah habis
+        if (timeRemaining < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML = "Flash Sale telah berakhir!";
+        }
+      }, 1000); // Update setiap 1 detik
+    </script>
+  </body>
 </html>
